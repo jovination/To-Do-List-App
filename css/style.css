@@ -51,7 +51,7 @@ main{
 }
 .logo__link h1 {
     font-family: 'Onest', sans-serif;
-    font-size: 22px;
+    font-size: 24px;
     font-weight: 600;
     color: #111;
 }
@@ -80,17 +80,23 @@ main{
     align-items: center;
 }
 .add__task{
-    width: 30px;
-    height: 30px;
+    width: 28px;
+    height: 28px;
 }
 .btn__add{
     border: none;
-    width: 75px;
-    height: 75px;
+    width: 72px;
+    height: 72px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #111;
     cursor: pointer;
+}
+#todo__form{
+    width: 512px;
+    height: 174px;
+    background: #F8F7F7;
+    border-radius: 20px;
 }
