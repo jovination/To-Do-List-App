@@ -99,4 +99,37 @@ main{
     height: 174px;
     background: #F8F7F7;
     border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+input[type="text"], input[type="time"]{
+    background: #F8F7F7;
+    border: none;
+    outline: none;
+    font-family: 'Onest', sans-serif;
+}
+.form__details{
+    width: 390px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+}
+.edit__btn{
+    width: 100px;
+    height: 100%;
+    background: #fff;
+}
+#task__title{
+    font-size: 24px;
+    font-weight: 600;
+    color: #111;
+}
+#detail__txt,
+#time__txt{
+    font-size: 18px;
+    font-weight: 500;
+    color: #111;
 }
