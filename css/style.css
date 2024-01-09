@@ -72,6 +72,13 @@ main{
     width: 100%;
     height: 420px;
 }
+.left__col{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+}
 .button__wrapper{
     width: 100%;
     height: 80px;
@@ -96,7 +103,7 @@ main{
 }
 #todo__form{
     width: 512px;
-    height: 174px;
+    height: 150px;
     background: #F8F7F7;
     border-radius: 20px;
     display: flex;
@@ -158,7 +165,7 @@ input[type="text"], input[type="time"]{
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
 }
 #edit__button{
     border: none;
@@ -170,4 +177,16 @@ input[type="text"], input[type="time"]{
     justify-content: center;
     align-items: center;
     cursor: pointer;
+}
+.task{
+    width: 512px;
+    height: 120px;
+    border-radius: 20px;
+    background: #111;
+}
+.todos ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
