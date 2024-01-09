@@ -267,7 +267,14 @@ input[type="checkbox"]{
     height: 34px;
     border-radius: 50%;
     cursor: pointer;
+    display: grid;
+    place-content: center;
     position: absolute;
     top: 2px;
     right: -9px;
 }
+input[type="checkbox"]::before{
+    content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none"><path d="M10.4167 16.2354L6.98647 12.8052L5.51355 14.2781L10.4167 19.1812L20.5281 9.06978L19.0552 7.59686L10.4167 16.2354Z" fill="black"/></svg>');
+    
+}
+    
