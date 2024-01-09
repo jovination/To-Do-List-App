@@ -199,13 +199,56 @@ input[type="text"], input[type="time"]{
 }
 .task{
     width: 500px;
-    height: 110px;
+    height: 115px;
     border-radius: 20px;
     background: #111;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
 }
 .todos ul{
     list-style-type: none;
     display: flex;
     flex-direction: column;
     gap: 12px;
+}
+.task__wrapper{
+    width: 390px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.r__title,
+.r__details,
+.r__time{
+    width: 100%;
+    height: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.r__time{
+    position: relative;
+}
+.task__time{
+    position: absolute;
+    right: -72px;
+}
+.check__wrapper{
+    width: 60px;
+    height: 100px;
+}
+.task__title{
+    font-size: 20px;
+    font-weight: 500;
+}
+.task__details{
+    font-size: 16px;
+}
+.task__time{
+    font-size: 12px;
 }
