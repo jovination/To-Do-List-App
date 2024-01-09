@@ -20,7 +20,7 @@ header{
     align-items: center;
 }
 .nav-bar{
-    width: 1100px;
+    width: 1050px;
     height: 100%;
     display: flex;
     justify-content: space-between;
@@ -46,8 +46,8 @@ main{
     height: 35px;
 }
 .notify{
-    width: 35px;
-    height: 35px;
+    width: 32px;
+    height: 32px;
 }
 .logo__link h1 {
     font-family: 'Onest', sans-serif;
@@ -57,7 +57,7 @@ main{
 }
 
 .wrapper{
-    width: 1100px;
+    width: 1050px;
     height: 600px;
     display: flex;
     flex-direction: row;
@@ -65,12 +65,18 @@ main{
 }
 .left__col,
 .right__col{
-    width: 520px;
+    width: 500px;
     height: 100%;
 }
 .illustration__wrapper{
     width: 100%;
-    height: 420px;
+    height: 400px;
+}
+.illustration{
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+    
 }
 .left__col{
     display: flex;
@@ -81,19 +87,19 @@ main{
 }
 .button__wrapper{
     width: 100%;
-    height: 80px;
+    height: 90px;
     display: flex;
     justify-content: end;
     align-items: center;
 }
 .add__task{
-    width: 28px;
-    height: 28px;
+    width: 25px;
+    height: 25px;
 }
 .btn__add{
     border: none;
-    width: 72px;
-    height: 72px;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -102,7 +108,7 @@ main{
     cursor: pointer;
 }
 #todo__form{
-    width: 512px;
+    width: 500px;
     height: 150px;
     background: #F8F7F7;
     border-radius: 20px;
@@ -117,7 +123,7 @@ input[type="text"], input[type="time"]{
     font-family: 'Onest', sans-serif;
 }
 .form__details{
-    width: 390px;
+    width: 400px;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -144,24 +150,24 @@ input[type="text"], input[type="time"]{
 }
 #detail__txt,
 #time__txt{
-    font-size: 18px;
+    font-size: 17px;
     font-weight: 500;
     color: #111;
 }
 #detail__txt::placeholder,
 #time__txt::placeholder{
-    font-size: 18px;
+    font-size: 17px;
     font-weight: 500;
     color: #2C2C2C;
 }
 .row__title{
     width: 100%;
-    height: 35px;
+    height: 34px;
 }
 .row__detail,
 .row__time{
     width: 100%;
-    height: 35px;
+    height: 34px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -169,8 +175,8 @@ input[type="text"], input[type="time"]{
 }
 #edit__button{
     border: none;
-    width: 60px;
-    height: 60px;
+    width: 55px;
+    height: 55px;
     border-radius: 50%;
     background: #fff;
     display: flex;
@@ -180,7 +186,7 @@ input[type="text"], input[type="time"]{
 }
 .task{
     width: 512px;
-    height: 120px;
+    height: 110px;
     border-radius: 20px;
     background: #111;
 }
@@ -188,5 +194,5 @@ input[type="text"], input[type="time"]{
     list-style-type: none;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
 }
