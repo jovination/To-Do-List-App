@@ -185,7 +185,7 @@ input[type="text"], input[type="time"]{
     cursor: pointer;
 }
 .task{
-    width: 512px;
+    width: 500px;
     height: 110px;
     border-radius: 20px;
     background: #111;
