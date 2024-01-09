@@ -263,8 +263,8 @@ input[type="checkbox"]{
     appearance: none;
     background: #fff;
     margin: 0;
-    width: 34px;
-    height: 34px;
+    width: 32px;
+    height: 32px;
     border-radius: 50%;
     cursor: pointer;
     display: grid;
