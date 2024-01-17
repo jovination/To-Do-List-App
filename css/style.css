@@ -5,7 +5,9 @@
 }
 html{
     font-family: 'Onest', sans-serif;
+    font-size: 80%;
 }
+
 body{
     width: 1310px;
     height:  600px;
@@ -38,7 +40,7 @@ footer{
 }
 .footer__wrapper{
     justify-content: flex-end;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 600;
 }
 main{
