@@ -15,7 +15,7 @@
             <div class="logo">
             <a class="logo__link" href="">
                 <img class="logo__icon" src="assets/icons/logo.svg" alt="To-Do icon" srcset="">
-                <h1>To-Do Lyst</h1>
+                <h1>ToDo Lyst</h1>
             </a>
             </div>
          <div class="notify__icon">
@@ -37,7 +37,7 @@
                    </div>
                      <div class="row__time">
                       <img class="t__icon" src="assets/icons/time.svg" alt="">
-                      <input id="time__txt" type="text" name="time__txt" placeholder="Add time">
+                      <span id="time__txt"  onclick="openPopup()">Add time</span>  
                     </div>
                 </div>
                 <div class="edit__btn">
@@ -46,6 +46,11 @@
                     </button>
                 </div>
                 </form>
+
+                <div class="setTime_ui" id="setTimePopup">
+                <div class="setTime_wrapper"></div>
+
+                </div>
                 <div class="todos">
                     <ul>
                     <li class="task">

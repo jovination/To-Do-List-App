@@ -118,13 +118,13 @@ main{
     width: 500px;
     height: 150px;
     background: #f6f5f4;
-    ;
     border-radius: 20px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    display: none;
 }
-input[type="text"], input[type="time"]{
+input[type="text"]{
     background: #F8F7F7;
     border: none;
     outline: none;
@@ -147,26 +147,31 @@ input[type="text"], input[type="time"]{
     align-items: center;
 }
 #task__title{
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 600;
     color: #111;
 }
 #task__title::placeholder{
     font-size: 24px;
     font-weight: 600;
-    background: transparent;
+    background: #f6f5f4;
 }
-#detail__txt,
-#time__txt{
+#detail__txt{
     font-size: 17px;
     font-weight: 500;
     color: #111;
 }
-#detail__txt::placeholder,
-#time__txt::placeholder{
+#time__txt{
+    font-size: 16px;
+    font-weight: 500;
+    color: #757575;
+    cursor: pointer;
+}
+
+#detail__txt::placeholder{
     font-size: 17px;
     font-weight: 500;
-    background: transparent;
+    background: #f6f5f4;
 }
 
 .row__title{
@@ -184,8 +189,8 @@ input[type="text"], input[type="time"]{
 }
 
 .d__icon{
-    width: 26px;
-    height: 26px;
+    width: 24px;
+    height: 24px;
 }
 .t__icon{
     width: 16px;
@@ -286,4 +291,20 @@ input[type="checkbox"]::before {
     content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 25 25" fill="none"><path d="M10.4167 16.2354L6.98647 12.8052L5.51355 14.2781L10.4167 19.1812L20.5281 9.06978L19.0552 7.59686L10.4167 16.2354Z" fill="black"/></svg>');
     
 }
+}
+.setTime_ui{
+    width: 250px;
+    height: 400px;
+    background: #000000;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+.setTime_wrapper{
+    width: 230px;
+    height: 370px;
+    background: #0C0C0C;
+    border-radius: 18px;
 }
