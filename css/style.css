@@ -5,7 +5,7 @@
 }
 html{
     font-family: 'Onest', sans-serif;
-    font-size: 80%;
+    font-size: 60%;
 }
 
 body{
@@ -21,28 +21,15 @@ header{
     justify-content: center;
     align-items: center;
 }
-footer{
-    width: 100%;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
-}
-  
-.nav-bar,
-.footer__wrapper{
+.nav-bar{
     width: 1050px;
     height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.footer__wrapper{
-    justify-content: flex-end;
-    font-size: 14px;
-    font-weight: 600;
-}
+
 main{
     width: 100%;
     height: 550px;
@@ -165,7 +152,7 @@ input[type="text"], input[type="time"]{
 #task__title::placeholder{
     font-size: 24px;
     font-weight: 600;
-    color: #111;
+    background: transparent;
 }
 #detail__txt,
 #time__txt{
@@ -177,8 +164,9 @@ input[type="text"], input[type="time"]{
 #time__txt::placeholder{
     font-size: 17px;
     font-weight: 500;
-    color: #2C2C2C;
+    background: transparent;
 }
+
 .row__title{
     width: 100%;
     height: 34px;
@@ -207,8 +195,8 @@ input[type="text"], input[type="time"]{
 }
 #edit__button{
     border: none;
-    width: 45px;
-    height: 45px;
+    width: 42px;
+    height: 42px;
     border-radius: 50%;
     background: #fff;
     display: flex;
@@ -282,8 +270,8 @@ input[type="checkbox"]{
     appearance: none;
     background: #fff;
     margin: 0;
-    width: 32px;
-    height: 32px;
+    width: 24px;
+    height: 24px;
     border-radius: 50%;
     cursor: pointer;
     display: grid;
@@ -293,7 +281,7 @@ input[type="checkbox"]{
     right: -9px;
 }
 input[type="checkbox"]::before {
-    content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none"><path d="M10.4167 16.2354L6.98647 12.8052L5.51355 14.2781L10.4167 19.1812L20.5281 9.06978L19.0552 7.59686L10.4167 16.2354Z" fill="black"/></svg>');
+    content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 25 25" fill="none"><path d="M10.4167 16.2354L6.98647 12.8052L5.51355 14.2781L10.4167 19.1812L20.5281 9.06978L19.0552 7.59686L10.4167 16.2354Z" fill="black"/></svg>');
     
 }
 }
