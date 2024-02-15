@@ -306,7 +306,7 @@ input[type="checkbox"]::before {
 .setTime_wrapper{
     width: 230px;
     height: 370px;
-    background: #0C0C0C;
+    background: #121111;
     border-radius: 18px;
     display: flex;
     flex-direction: column;
@@ -328,11 +328,10 @@ input[type="checkbox"]::before {
     display: flex;
     justify-content: center;
     flex-direction: row;
-    gap: 20px;
+    gap: 15px;
 }
 .timer_box span{
     font-family: 'onest', sans-serif;
-
     font-size: 25px;
     font-weight: 600;
 }
@@ -341,7 +340,7 @@ input[type="checkbox"]::before {
     width: 65px;
     height: 70px;
     border-radius: 6px;
-    background: #161616;
+    background: #1c1c1c;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -357,7 +356,7 @@ input[type="checkbox"]::before {
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    background: #161616;
+    background: #1c1c1c;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -382,11 +381,12 @@ input[type="checkbox"]::before {
 }
 .hr_init{
     transform: rotate(calc(30deg * var(--n)));
-    width: 140px;
-    height: 140px;
+    width: 130px;
+    height: 130px;
     position: absolute;
+    top: 252px;
+    left: 315px;
     text-align: center;
-    color: #fff;
 
 }
 .hr_init span{
