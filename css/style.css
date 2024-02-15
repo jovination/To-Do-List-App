@@ -354,10 +354,18 @@ input[type="checkbox"]::before {
     align-items: center;
 }
 .min{
-    width: 190px;
-    height: 190px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     background: #161616;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hr{
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
 }
 .timer_btn_logic{
     display: flex;
@@ -371,4 +379,21 @@ input[type="checkbox"]::before {
     font-size: 12px;
     cursor: pointer;
     font-family: 'onest', sans-serif;
+}
+.hr_init{
+    transform: rotate(calc(30deg * var(--n)));
+    width: 140px;
+    height: 140px;
+    position: absolute;
+    text-align: center;
+    color: #fff;
+
+}
+.hr_init span{
+    font-size: 12px;
+    font-weight: 500;
+    transform: rotate(calc(-30deg * var(--n)));
+    display: inline-block;
+
+
 }
