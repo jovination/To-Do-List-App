@@ -365,6 +365,7 @@ input[type="checkbox"]::before {
     width: 140px;
     height: 140px;
     border-radius: 50%;
+    position: relative;
 }
 .timer_btn_logic{
     display: flex;
@@ -384,8 +385,8 @@ input[type="checkbox"]::before {
     width: 130px;
     height: 130px;
     position: absolute;
-    top: 252px;
-    left: 315px;
+    top: 6px;
+    left: 5px;
     text-align: center;
 
 }
