@@ -7,7 +7,16 @@ html{
     font-family: 'Onest', sans-serif;
     font-size: 60%;
 }
-
+/* Target autofill styles in WebKit browsers */
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px #F6F5F4 inset !important; /* Override box-shadow */
+  }
+  
+  /* Reset appearance for autofill */
+  input:-webkit-autofill {
+    -webkit-text-fill-color: #333; /* Override text color */
+  }
+  
 body{
     width: 1310px;
     height:  600px;
@@ -147,6 +156,7 @@ input[type="text"]{
     align-items: center;
 }
 #task__title{
+    width: 400px;
     font-size: 20px;
     font-weight: 600;
     color: #111;
@@ -157,6 +167,7 @@ input[type="text"]{
     background: #f6f5f4;
 }
 #detail__txt{
+    width: 400px;
     font-size: 17px;
     font-weight: 500;
     color: #111;
@@ -344,6 +355,7 @@ input[type="checkbox"]::before {
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 .cir_time_selector{
     width: 100%;
