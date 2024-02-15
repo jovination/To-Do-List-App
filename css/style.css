@@ -122,8 +122,8 @@ main{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    display: none;
 }
+
 input[type="text"]{
     background: #F8F7F7;
     border: none;

@@ -26,6 +26,7 @@
     <main>
         <div class="wrapper">
             <div class="left__col">
+                <div id="form_wrapper">
                 <form action="" id="todo__form">
                 <div class="form__details">
                    <div class="row__title">
@@ -37,7 +38,7 @@
                    </div>
                      <div class="row__time">
                       <img class="t__icon" src="assets/icons/time.svg" alt="">
-                      <span id="time__txt"  onclick="openPopup()">Add time</span>  
+                      <span id="time__txt" class="clicked">Add time</span>  
                     </div>
                 </div>
                 <div class="edit__btn">
@@ -46,8 +47,10 @@
                     </button>
                 </div>
                 </form>
+            </div>
 
-                <div class="setTime_ui" id="setTimePopup">
+                <div id="setTimePopup">
+                <div class="setTime_ui">
                 <div class="setTime_wrapper">
                     <div class="timer_selector">
                         <div class="set_txt">
@@ -77,6 +80,7 @@
                     </div>
                 </div>
 
+                </div>
                 </div>
                 <div class="todos">
                     <ul>
