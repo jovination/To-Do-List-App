@@ -352,7 +352,7 @@ input[type="checkbox"]::before {
     justify-content: center;
     align-items: center;
 }
-.min{
+.hr-1{
     width: 200px;
     height: 200px;
     border-radius: 50%;
@@ -360,6 +360,8 @@ input[type="checkbox"]::before {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+
 }
 .hr{
     width: 140px;
@@ -390,11 +392,22 @@ input[type="checkbox"]::before {
     text-align: center;
 
 }
+.hr-12{
+    transform: rotate(calc(30deg * var(--n)));
+    width: 185px;
+    height: 185px;
+    position: absolute;
+    top: 9.05px;
+    left: 7px;
+    text-align: center;
+}
+
+.hr-12 span,
 .hr_init span{
     font-size: 12px;
     font-weight: 500;
     transform: rotate(calc(-30deg * var(--n)));
     display: inline-block;
-
+    color: #C4C4C4;
 
 }
