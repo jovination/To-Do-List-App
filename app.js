@@ -19,3 +19,14 @@ document.addEventListener('DOMContentLoaded', function(){
         setTimePopup.style.display = 'none';
     }
     });
+
+    document.querySelectorAll('.hr_init span, .hr-12 span').forEach(item => {
+        item.addEventListener('click', event => {
+            const selectedSpan = event.target;
+            const selectedValue = selectedSpan.textContent;
+            document.getElementById('active').removeAttribute('id');
+            selectedSpan.setAttribute('id', 'active');
+            document.getElementById('hr_id').textContent = selectedValue;
+        });
+    });
+   

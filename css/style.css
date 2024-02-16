@@ -395,18 +395,17 @@ input[type="checkbox"]::before {
     font-family: 'onest', sans-serif;
 }
 .hr_init{
-    transform: rotate(calc(30deg * var(--n)));
-    height: 140px;
+    transform: rotate(calc(30deg * var(--n))) translateY(-50px);
+
     position: absolute;
+    top: 56px;
     left: 56px;
     text-align: center;
     cursor: pointer;
-    z-index: 2;
-
+    z-index: 5;
 }
 .hr-12{
-    transform: rotate(calc(30deg * var(--n)));
-    height: 200px;
+    transform: rotate(calc(30deg * var(--n))) translateY(-80px);
     position: absolute;
     left: 86px;
     text-align: center;
@@ -427,10 +426,11 @@ input[type="checkbox"]::before {
     border-radius: 50%;
 
 }
-.active{
-    background: #111;
-    border-radius: 50%;
 
-    
+#active{
+    background: #fff;
+    color: #000;
+    font-weight: 600;
+    border-radius: 50%;  
      
 }
