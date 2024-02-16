@@ -1,32 +1,26 @@
-
 document.addEventListener('DOMContentLoaded', function(){
-    const addTime = document.getElementById('time__txt');
-    const cancelBtn = document.getElementById('cancel_logic');
-    const todoForm = document.getElementById('form_wrapper');
-    const setTimePopup = document.getElementById('setTimePopup');
+    const elements = {
+        addTime: document.getElementById('time__txt'),
+        cancelBtn: document.getElementById('cancel_logic'),
+        todoForm: document.getElementById('form_wrapper'),
+        setTimePopup: document.getElementById('setTimePopup'),
+    };
     
-    
-    setTimePopup.style.display = 'none';
-    addTime.onclick = () => setTime();
-    cancelBtn.onclick = () => cancelSetTime();
+    elements.setTimePopup.style.display = 'none';
+    elements.addTime.onclick = toggleDisplay.bind(null, 'block');
+    elements.cancelBtn.onclick = toggleDisplay.bind(null, 'none');
 
-    function setTime(){
-        todoForm.style.display = 'none';
-        setTimePopup.style.display = 'block';
+    function toggleDisplay(displayStatus){
+        elements.todoForm.style.display = displayStatus === 'none' ? 'block' : 'none';
+        elements.setTimePopup.style.display = displayStatus;
     }
-    function cancelSetTime(){
-        todoForm.style.display = 'block';
-        setTimePopup.style.display = 'none';
-    }
-    });
+});
 
-    document.querySelectorAll('.hr_init span, .hr-12 span').forEach(item => {
-        item.addEventListener('click', event => {
-            const selectedSpan = event.target;
-            const selectedValue = selectedSpan.textContent;
-            document.getElementById('active').removeAttribute('id');
-            selectedSpan.setAttribute('id', 'active');
-            document.getElementById('hr_id').textContent = selectedValue;
-        });
+document.querySelectorAll('.hr_init span, .hr-12 span').forEach(item => {
+    item.addEventListener('click', event => {
+        const selectedSpan = event.target;
+        document.querySelector('#active')?.removeAttribute('id');
+        selectedSpan.id = 'active';
+        document.getElementById('hr_id').textContent = selectedSpan.textContent;
     });
-   
+});

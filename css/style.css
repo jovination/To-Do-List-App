@@ -396,23 +396,34 @@ input[type="checkbox"]::before {
 }
 .hr_init{
     transform: rotate(calc(30deg * var(--n))) translateY(-50px);
-
     position: absolute;
-    top: 56px;
-    left: 56px;
+    top: 55px;
+    left: 55px;
     text-align: center;
     cursor: pointer;
     z-index: 5;
+    display: none;
 }
 .hr-12{
     transform: rotate(calc(30deg * var(--n))) translateY(-80px);
     position: absolute;
-    left: 86px;
+    top: 85px;
+    left: 85px;
+    text-align: center;
+    cursor: pointer;
+    z-index: 1;
+    display: none;
+}
+.min-1{
+    transform: rotate(calc(30deg * var(--n))) translateY(-80px);
+    position: absolute;
+    top: 85px;
+    left: 85px;
     text-align: center;
     cursor: pointer;
     z-index: 1;
 }
-
+.min-1 span,
 .hr-12 span,
 .hr_init span{
     font-size: 12px;
