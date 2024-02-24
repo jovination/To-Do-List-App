@@ -28,6 +28,42 @@ document.addEventListener('DOMContentLoaded', function(){
         toggleDisplay('none');
     });
 });
+document.addEventListener('DOMContentLoaded', function() {
+    const taskTitleInput = document.getElementById('task__title');
+    const detailTextInput = document.getElementById('detail__txt');
+    const addIcon = document.querySelector('.add__icon');
+    const editIcon = document.querySelector('.edit__icon');
+    const editButton = document.getElementById('edit__button');
+
+    // Function to toggle the visibility of addIcon and editIcon
+    function toggleIcons() {
+        // Check if either input field has text
+        if (taskTitleInput.value.trim() !== '' || detailTextInput.value.trim() !== '') {
+            // If text is present, hide editIcon and show addIcon
+            editIcon.style.display = 'none';
+            addIcon.style.display = 'block';
+        } else {
+            // If no text is present, show editIcon and hide addIcon
+            editIcon.style.display = 'block';
+            addIcon.style.display = 'none';
+        }
+    }
+
+    // Event listeners for input fields
+    taskTitleInput.addEventListener('input', toggleIcons);
+    detailTextInput.addEventListener('input', toggleIcons);
+
+    // Initial call to toggleIcons to set initial visibility
+    toggleIcons();
+
+    // Event listener for edit button
+    editButton.addEventListener('click', function() {
+        // Show edit button and hide add icon when clicked
+        editIcon.style.display = 'block';
+        addIcon.style.display = 'none';
+    });
+});
+
 
 
 // Function to toggle visibility of hour and minute selectors

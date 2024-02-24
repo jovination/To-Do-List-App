@@ -173,7 +173,7 @@ input[type="text"]{
     color: #111;
 }
 #time__txt{
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 500;
     color: #757575;
     cursor: pointer;
@@ -204,13 +204,18 @@ input[type="text"]{
     height: 24px;
 }
 .t__icon{
-    width: 16px;
-    height: 16px;
+    width: 14px;
+    height: 14px;
 }
 .edit__icon{
     width: 20px;
     height: 20px;
 }
+.add__icon{
+    width: 24px;
+    height: 24px;
+}
+
 #edit__button{
     border: none;
     width: 42px;
