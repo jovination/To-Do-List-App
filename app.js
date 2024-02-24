@@ -28,43 +28,91 @@ document.addEventListener('DOMContentLoaded', function(){
         toggleDisplay('none');
     });
 });
+
 document.addEventListener('DOMContentLoaded', function() {
     const taskTitleInput = document.getElementById('task__title');
     const detailTextInput = document.getElementById('detail__txt');
+    const timeAddInput = document.getElementById('time__txt');
+
     const addIcon = document.querySelector('.add__icon');
     const editIcon = document.querySelector('.edit__icon');
     const editButton = document.getElementById('edit__button');
+    const ulElements = document.querySelector('.todo_list'); // Moved outside to optimize
 
-    // Function to toggle the visibility of addIcon and editIcon
-    function toggleIcons() {
-        // Check if either input field has text
-        if (taskTitleInput.value.trim() !== '' || detailTextInput.value.trim() !== '') {
-            // If text is present, hide editIcon and show addIcon
-            editIcon.style.display = 'none';
-            addIcon.style.display = 'block';
-        } else {
-            // If no text is present, show editIcon and hide addIcon
-            editIcon.style.display = 'block';
-            addIcon.style.display = 'none';
+    let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+
+    addIcon.addEventListener('click', function(event) {
+        event.preventDefault();
+        
+        const task_title = taskTitleInput.value;
+        const task_detail = detailTextInput.value;
+        const task_time = timeAddInput.value;
+
+        if (task_title.trim() === '' || task_detail.trim() === ''){
+            return;
         }
+
+        const task = {
+            id: new Date().getTime(),
+            title: task_title,
+            detail: task_detail,
+            time: `${document.getElementById('hr_id').textContent}:${document.getElementById('min_id').textContent}`,
+            completed: false
+        }
+        tasks.push(task);
+        localStorage.setItem('tasks', JSON.stringify(tasks));
+
+        createTask(task);
+        addIcon.reset();
+        detailTextInput.focus();   
+     });
+
+    function createTask(task) {
+        const taskList = document.createElement('li');
+
+        // Set id directly
+        taskList.id = task.id;
+
+        const tasklistMockup = `
+        <div class="task" id=${task.id}>
+            <div class="task__wrapper">
+                <div class="r__title">
+                    <span class="task__title">${task.title}</span>
+                </div>
+                <div class="r__details">
+                    <span class="task__details">${task.detail}</span>
+                </div>
+                <div class="r__time">
+                    <img class="clock__icon" src="assets/icons/clock.svg" alt="">
+                    <span class="task__time">${task.time}</span>
+                </div>
+            </div>
+
+            <div class="check__wrapper">
+                <input type="checkbox" name="tasks" id="complete">
+            </div>
+        </div>
+        `;
+
+        taskList.innerHTML = tasklistMockup;
+        ulElements.appendChild(taskList);
     }
 
-    // Event listeners for input fields
+    function toggleIcons() {
+        const isTextPresent = taskTitleInput.value.trim() !== '' || detailTextInput.value.trim() !== '';
+        editIcon.style.display = isTextPresent ? 'none' : 'block';
+        addIcon.style.display = isTextPresent ? 'block' : 'none';
+    }
+
     taskTitleInput.addEventListener('input', toggleIcons);
     detailTextInput.addEventListener('input', toggleIcons);
-
-    // Initial call to toggleIcons to set initial visibility
     toggleIcons();
 
-    // Event listener for edit button
     editButton.addEventListener('click', function() {
-        // Show edit button and hide add icon when clicked
         editIcon.style.display = 'block';
         addIcon.style.display = 'none';
     });
 });
-
-
 
 // Function to toggle visibility of hour and minute selectors
 function toggleSelectors(showHours) {

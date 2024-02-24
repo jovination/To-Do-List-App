@@ -260,9 +260,8 @@ input[type="text"]{
     align-items: center;
     justify-content: center;
     gap: 10px;
-    display: none;
-}
-.todos ul{
+  }
+.todo_list{
     list-style-type: none;
     display: flex;
     flex-direction: column;
