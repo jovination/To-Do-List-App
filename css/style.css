@@ -166,23 +166,32 @@ input[type="text"]{
     font-weight: 600;
     background: #f6f5f4;
 }
-#detail__txt {
+#detail__txt{
     flex: 1;
-    min-width: 0;
-    min-height: 0;
+    font-size: 16px;
+    color: #111;
+    min-width: 0; /* Allow the textarea to shrink if necessary */
+    min-height: 0; /* Allow the textarea to shrink if necessary */
     border: none;
     font-family: 'onest', sans-serif;
-    padding: 10px;
-    resize: both;
+    resize: both; /* Allow both vertical and horizontal resizing *//* Define font size */
     outline: none;
-    margin: 0;
-    padding: 0;
-    background-color: transparent;
-    color: inherit;
-    font: inherit;
-    line-height: inherit;
-    overflow: auto;
+
+     /* Reset box model */
+     margin-top: 20px;
+     padding: 0;
+     border: none;
+ 
+     /* Reset appearance */
+     background-color: transparent;
+     font-family: 'Onest';
+ 
+     /* Reset other styles */
+     resize: none;
+     outline: none;
+     overflow: auto; /* Add scrollbars if content overflows */
 }
+
 #time__txt{
     font-size: 14px;
     font-weight: 500;
