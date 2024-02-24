@@ -2,8 +2,11 @@ document.addEventListener('DOMContentLoaded', function(){
     const elements = {
         addTime: document.getElementById('time__txt'),
         cancelBtn: document.getElementById('cancel_logic'),
+        okBtn: document.getElementById('ok_logic'), // Corrected the method name
         todoForm: document.getElementById('form_wrapper'),
         setTimePopup: document.getElementById('setTimePopup'),
+        hrId: document.getElementById('hr_id'),
+        minId: document.getElementById('min_id')
     };
     
     elements.setTimePopup.style.display = 'none';
@@ -14,7 +17,18 @@ document.addEventListener('DOMContentLoaded', function(){
         elements.todoForm.style.display = displayStatus === 'none' ? 'block' : 'none';
         elements.setTimePopup.style.display = displayStatus;
     }
+
+    // Event listener for 'ok_logic' button click
+    elements.okBtn.addEventListener('click', function() {
+        // Concatenate hr_id and min_id values with a colon ':'
+        const timeValue = elements.hrId.textContent + ':' + elements.minId.textContent;
+        // Update the text content of the 'time__txt' element with the combined value
+        elements.addTime.textContent = timeValue;
+        // Close the popup
+        toggleDisplay('none');
+    });
 });
+
 
 // Function to toggle visibility of hour and minute selectors
 function toggleSelectors(showHours) {
