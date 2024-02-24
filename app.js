@@ -24,3 +24,14 @@ document.querySelectorAll('.hr_init span, .hr-12 span').forEach(item => {
         document.getElementById('hr_id').textContent = selectedSpan.textContent;
     });
 });
+
+document.querySelectorAll('.min-1 span').forEach(item => {
+    item.addEventListener('click', event => {
+        const selectedSpan = event.target;
+        document.querySelector('#active')?.removeAttribute('id');
+        selectedSpan.id = 'active';
+        document.getElementById('min_id').textContent = selectedSpan.textContent;
+    });
+});
+
+

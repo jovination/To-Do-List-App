@@ -402,7 +402,6 @@ input[type="checkbox"]::before {
     text-align: center;
     cursor: pointer;
     z-index: 5;
-    display: none;
 }
 .hr-12{
     transform: rotate(calc(30deg * var(--n))) translateY(-80px);
@@ -412,7 +411,6 @@ input[type="checkbox"]::before {
     text-align: center;
     cursor: pointer;
     z-index: 1;
-    display: none;
 }
 .min-1{
     transform: rotate(calc(30deg * var(--n))) translateY(-80px);
@@ -421,6 +419,7 @@ input[type="checkbox"]::before {
     left: 85px;
     text-align: center;
     cursor: pointer;
+    display: none;
     z-index: 1;
 }
 .min-1 span,
