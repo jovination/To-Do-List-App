@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const addIcon = document.querySelector('.add__icon');
     const editIcon = document.querySelector('.edit__icon');
     const editButton = document.getElementById('edit__button');
-    const ulElements = document.querySelector('.todo_list'); // Moved outside to optimize
+    const ulElements = document.querySelector('.todo_list');
 
     let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
 
@@ -63,15 +63,21 @@ document.addEventListener('DOMContentLoaded', function() {
         localStorage.setItem('tasks', JSON.stringify(tasks));
 
         createTask(task);
-        addIcon.reset();
-        detailTextInput.focus();   
+        
+        // Clear input fields after adding task
+        taskTitleInput.value = '';
+        detailTextInput.value = '';
+        timeAddInput.value = '';
+
+        taskTitleInput.focus(); // Optionally focus on the title input field
+
+        toggleIcons();
      });
 
     function createTask(task) {
         const taskList = document.createElement('li');
 
-        // Set id directly
-        taskList.id = task.id;
+        taskList.setAttribute = ( 'id', task.id);
 
         const tasklistMockup = `
         <div class="task" id=${task.id}>
@@ -113,6 +119,8 @@ document.addEventListener('DOMContentLoaded', function() {
         addIcon.style.display = 'none';
     });
 });
+
+
 
 // Function to toggle visibility of hour and minute selectors
 function toggleSelectors(showHours) {
