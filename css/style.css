@@ -33,7 +33,7 @@ header{
 }
 
 .nav-bar{
-    width: 1050px;
+    width: 1150px;
     height: 100%;
     display: flex;
     justify-content: space-between;
@@ -71,7 +71,7 @@ main{
 }
 
 .wrapper{
-    width: 1050px;
+    width: 1150px;
     height: 600px;
     display: flex;
     flex-direction: row;
