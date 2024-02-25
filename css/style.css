@@ -131,6 +131,7 @@ main{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    box-shadow: 12px 11px 15px -5px rgba(0,0,0,0.1);    
 }
 
 input[type="text"]{
@@ -158,18 +159,19 @@ input[type="text"]{
 #task__title{
     width: 400px;
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 500;
     color: #111;
 }
 #task__title::placeholder{
     font-size: 24px;
-    font-weight: 600;
+    font-weight: 500;
     background: #f6f5f4;
 }
 #detail__txt{
     flex: 1;
     font-size: 16px;
     color: #111;
+    font-weight: 400;
     min-width: 0; /* Allow the textarea to shrink if necessary */
     min-height: 0; /* Allow the textarea to shrink if necessary */
     border: none;
@@ -301,6 +303,7 @@ input[type="text"]{
     font-size: 18px;
 }
 .task__details{
+    font-weight: 300;
     font-size: 14px;
 }
 .task__time{
