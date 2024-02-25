@@ -18,11 +18,14 @@ input:-webkit-autofill {
   }
   
 body{
-    width: 1310px;
-    height:  600px;
+    width: 100%;
+    height:  100%;
     margin: 0 auto;
     overflow: hidden;
     background: #fff;
+    position: relative;
+    z-index: 1;
+}
     
 header{
     width: 100%;
@@ -42,7 +45,7 @@ header{
 
 main{
     width: 100%;
-    height: 550px;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -76,6 +79,7 @@ main{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+   
 }
 .left_col_1,
 .left__col,
@@ -424,7 +428,27 @@ input[type="checkbox"]::before {
     content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 25 25" fill="none"><path d="M10.4167 16.2354L6.98647 12.8052L5.51355 14.2781L10.4167 19.1812L20.5281 9.06978L19.0552 7.59686L10.4167 16.2354Z" fill="black"/></svg>');
     
 }
+
+.pop_auth{
+    width: 100%;
+    height:  100%;
+    background-color: rgba(0, 0, 0, 0.60);
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 2;
+    display: none;
 }
+.sign_ui{
+    margin: 15px 20px 10px 0px;
+    width: 434px;
+    height: 600px;
+    background: #000;
+    border-radius: 30px;
+}
+
 .setTime_ui{
     width: 250px;
     height: 400px;
