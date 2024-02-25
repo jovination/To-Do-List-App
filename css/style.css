@@ -130,6 +130,47 @@ main{
     flex-direction: column;
     gap: 40px;
 }
+.notify__icon{
+    display: none;
+}
+.auth_btn{
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+}
+.sign_btn{
+ width: 90px;
+ height: 40px;
+ border-radius: 6px;
+ background: #000;
+ color: #fff;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ cursor: pointer;
+}
+.login_btn{
+width: 90px;
+ height: 40px;
+ border-radius: 6px;
+ color: #000;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ cursor: pointer;
+
+}
+#sign,
+#login{
+    font-size: 16px;
+}
+#login{
+    font-weight: 600;
+}
+
+
+
+
 
 .illustration__wrapper{
     width: 100%;
