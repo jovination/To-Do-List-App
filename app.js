@@ -171,3 +171,23 @@ document.querySelectorAll('.min-1 span').forEach(item => {
         toggleSelectors(true);
     });
 });
+
+document.querySelector('.sign_btn').addEventListener('click', function() {
+    document.getElementById('popup_auth').style.display = 'block';
+});
+
+document.getElementById('popup_auth').addEventListener('click', function(event) {
+    const popup = document.getElementById('popup_auth');
+    const authWrap = document.querySelector('.auth_wrap');
+    const signUi = document.querySelector('.sign_ui');
+    const isClickInsideAuthWrap = authWrap.contains(event.target);
+    const isClickOnSignUi = signUi.contains(event.target);
+
+    if (isClickInsideAuthWrap && !isClickOnSignUi) {
+        popup.style.display = 'none';
+    }
+    else {
+        popup.style.display = 'block';
+    }
+});
+
