@@ -456,12 +456,13 @@ input[type="checkbox"]::before {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 30px;
+    gap: 20px;
 }
 .s_txt{
-    margin-bottom: 12px;
+    margin-bottom: 5px;
 }
 .term_wrap{
+    margin-top: 30px;
     display: flex;
     flex-direction: column;
     display: flex;
@@ -484,6 +485,9 @@ input[type="checkbox"]::before {
     align-items: center;
     justify-content: center;
     gap: 10px;
+}
+.opt{
+    background: #111;
 }
 .web_lang{
     width: 20px;
@@ -547,7 +551,7 @@ input[type="email"]{
     font-weight: 500;
 }
 .other_btn{
-    margin-top: 10px;
+    margin-top: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
