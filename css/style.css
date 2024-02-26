@@ -434,14 +434,20 @@ input[type="checkbox"]::before {
     height:  100%;
     background-color: rgba(0, 0, 0, 0.70);
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     top: 0px;
     left: 0px;
     z-index: 2;
 }
+.auth_wrap{
+    width: 1250px;
+    height: 640px;
+    display: flex;
+    justify-content: flex-end;
+}
 .sign_ui{
-    margin: 15px 20px 10px 0px;
     width: 434px;
     height: 600px;
     background: #000;
@@ -455,7 +461,43 @@ input[type="checkbox"]::before {
 .s_txt{
     margin-bottom: 12px;
 }
+.term_wrap{
+    display: flex;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.term_wrap span{
+    font-size: 14px;
+    font-weight: 500;
+    color: #777;
+    text-align: center;
+    & a{
+        color: #777;
 
+    }
+}
+.lang_wrap{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.web_lang{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+#language-select{
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #777;
+    font-size: 16px;
+    font-family: 'onest', sans-serif;
+}
 .s_txt span{
     font-size:30px;
     font-weight: 500;
