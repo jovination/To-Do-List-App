@@ -178,11 +178,11 @@ width: 85px;
 
 
 .illustration__wrapper{
+    margin-top: 50px;
     width: 100%;
     height: 420px;
 }
 .illustration{
-    margin-top: 40px;
     width: 100%;
     height: 100%;
     object-fit: cover;
