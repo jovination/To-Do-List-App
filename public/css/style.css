@@ -519,6 +519,7 @@ input[type="checkbox"]::before {
     align-items: center;
     flex-direction: row;
     position: relative;
+    text-decoration: none;
     cursor: pointer;
 }
 .gmail_btn{
