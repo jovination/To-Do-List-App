@@ -23,6 +23,9 @@ require('./auth');
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views')); // Configure views directory
 
+// Serve static files from the 'public' directory
+app.use(express.static(path.join(__dirname, 'public')));
+
 // Define route for home page
 app.get('/', (req, res) => {
     res.render('index');
@@ -46,6 +49,13 @@ function isLoggedIn(req, res, next) {
     if (req.isAuthenticated()) return next();
     res.redirect('/auth/google');
 }
+// Define route for logout
+app.get('/logout', (req, res) => {
+    // Destroy user session
+    req.logout();
+    // Redirect user to localhost:5100
+    res.redirect('http://localhost:5100');
+});
 
 // Define route for failed Google OAuth authentication
 app.get('/auth/google/failure', (req, res) => {

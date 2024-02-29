@@ -169,9 +169,11 @@ width: 85px;
 }
 }
 #sign,
-#login{
+#login,
+#logout{
     font-size: 16px;
 }
+#logout,
 #login{
     font-weight: 600;
 }

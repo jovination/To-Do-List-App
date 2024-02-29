@@ -171,23 +171,42 @@ document.querySelectorAll('.min-1 span').forEach(item => {
         toggleSelectors(true);
     });
 });
+// Cache DOM elements
+const signBtn = document.querySelector('.sign_btn');
+const popupAuth = document.getElementById('popup_auth');
+const authWrap = document.querySelector('.auth_wrap');
+const signUi = document.querySelector('.sign_ui');
 
-document.querySelector('.sign_btn').addEventListener('click', function() {
-    document.getElementById('popup_auth').style.display = 'block';
+// Add event listener for sign button click
+signBtn.addEventListener('click', function() {
+    popupAuth.style.display = 'block';
 });
 
-document.getElementById('popup_auth').addEventListener('click', function(event) {
-    const popup = document.getElementById('popup_auth');
-    const authWrap = document.querySelector('.auth_wrap');
-    const signUi = document.querySelector('.sign_ui');
+// Add event listener for clicks outside popup
+popupAuth.addEventListener('click', function(event) {
     const isClickInsideAuthWrap = authWrap.contains(event.target);
     const isClickOnSignUi = signUi.contains(event.target);
 
-    if (isClickInsideAuthWrap && !isClickOnSignUi) {
-        popup.style.display = 'none';
-    }
-    else {
-        popup.style.display = 'block';
+    if (!isClickInsideAuthWrap || isClickOnSignUi) {
+        popupAuth.style.display = 'none';
     }
 });
 
+
+// script.js
+
+// Get references to the login and logout buttons
+const loginButton = document.getElementById('login');
+const logoutButton = document.getElementById('logout');
+
+// Add click event listener for the login button
+loginButton.addEventListener('click', function() {
+    // Redirect the user to the Google OAuth authentication route when they click the login button
+    window.location.href = '/auth/google';
+});
+
+// Add click event listener for the logout button
+logoutButton.addEventListener('click', function() {
+    // Redirect the user to the logout route when they click the logout button
+    window.location.href = '/logout';
+});
