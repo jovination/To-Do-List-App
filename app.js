@@ -2,33 +2,9 @@ const express = require('express');
 const app = express();
 const passport = require('passport');
 const session = require('express-session');
-require('./auth')
+const path = require('path'); // Import the path module
 
-app.set('view engine', 'ejs')
-app.get('/', (req, res) => {
- res.render('index')
-
-})
-
-app.get('/auth/google',
-  passport.authenticate('google', { scope:
-      [ 'email', 'profile' ] }
-));
-
-app.get( '/auth/google/callback',
-    passport.authenticate( 'google', {
-        successRedirect: '/auth/protected',
-        failureRedirect: '/auth/google/failure'
-}));
-
-function isLoggedIn(req, res, next) {
-    if (req.isAuthenticated()) return next();
-    res.redirect('/auth/google');
-}
-app.get('/auth/protected',(req, res) => {
-    res.render('protected')
-});
-
+// Configure session middleware
 app.use(session({
     secret: 'mysecret',
     resave: false,
@@ -36,7 +12,55 @@ app.use(session({
     cookie: { secure: false }
 }));
 
+// Initialize Passport and restore authentication state, if any, from the session
 app.use(passport.initialize());
+app.use(passport.session());
 
-app.use(express.static(__dirname + '/public'));
-app.listen(process.env.PORT || 5100);
+// Require authentication configuration
+require('./auth');
+
+// Set view engine and views directory
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views')); // Configure views directory
+
+// Define route for home page
+app.get('/', (req, res) => {
+    res.render('index');
+});
+
+// Define route for Google OAuth authentication
+app.get('/auth/google',
+    passport.authenticate('google', { scope: ['email', 'profile'] })
+);
+
+// Define callback route for Google OAuth authentication
+app.get('/auth/google/callback',
+    passport.authenticate('google', {
+        successRedirect: '/auth/protected',
+        failureRedirect: '/auth/google/failure'
+    })
+);
+
+// Middleware to check if user is authenticated
+function isLoggedIn(req, res, next) {
+    if (req.isAuthenticated()) return next();
+    res.redirect('/auth/google');
+}
+
+// Define route for failed Google OAuth authentication
+app.get('/auth/google/failure', (req, res) => {
+    res.render('failure');
+});
+
+// Define protected route
+app.get('/auth/protected', isLoggedIn, (req, res) => {
+    res.render('protected'); // Ensure 'protected' matches the view filename
+});
+
+// Serve static files from public directory
+app.use(express.static(path.join(__dirname, 'public')));
+
+// Start server
+app.listen(process.env.PORT || 5100, () => {
+    console.log('Server is running...');
+});
