@@ -221,20 +221,25 @@ if (logoutButton) {
         // Redirect the user to the homepage when they click the logout button
         window.location.href = '/';
     });
-    document.addEventListener('DOMContentLoaded', function() {
-        const btnHero = document.querySelector('.btn_hero_1');
-        const leftCol = document.querySelector('.left__col');
-        const leftCol1 = document.querySelector('.left_col_1');
-    
-        // Check if the elements exist on the page
-        if (btnHero && leftCol && leftCol1) {
-            btnHero.addEventListener('click', function() {
-                leftCol.style.display = 'block';
-                leftCol1.style.display = 'none';
-            });
-        }
-    });
+   
 }
-
+document.addEventListener('DOMContentLoaded', function() {
+    const btnHero = document.querySelector('.btn_hero_1');
+    const leftCol = document.querySelector('.left__col');
+    const leftCol1 = document.querySelector('.left_col_1');
+    const addBtn = document.querySelector('.button__wrapper');
+ 
+      leftCol.style.display = 'none';
+      addBtn.style.display = 'none';
+    // Check if the elements exist on the page
+    if (btnHero && leftCol && leftCol1 && addBtn) {
+        btnHero.addEventListener('click', function() {
+            leftCol.setAttribute('style', '/* display: block; */');
+            addBtn.setAttribute('style', '/* display: block; */');
+            leftCol1.style.display = 'none';
+        });
+        
+    }
+});
 
 
