@@ -173,9 +173,16 @@ document.querySelectorAll('.min-1 span').forEach(item => {
 });
 // Cache DOM elements
 // Show popup when sign button is clicked
-document.querySelector('.sign_btn').addEventListener('click', function() {
-    document.getElementById('popup_auth').style.display = 'block';
+// Add event listener using querySelector
+document.addEventListener('DOMContentLoaded', function() {
+    const signBtn = document.querySelector('.sign_btn');
+    if (signBtn) {
+        signBtn.addEventListener('click', function() {
+            document.getElementById('popup_auth').style.display = 'block';
+        });
+    }
 });
+
 
 // Close popup when clicking outside of it
 document.getElementById('popup_auth').addEventListener('click', function(event) {
@@ -214,4 +221,20 @@ if (logoutButton) {
         // Redirect the user to the homepage when they click the logout button
         window.location.href = '/';
     });
+    document.addEventListener('DOMContentLoaded', function() {
+        const btnHero = document.querySelector('.btn_hero_1');
+        const leftCol = document.querySelector('.left__col');
+        const leftCol1 = document.querySelector('.left_col_1');
+    
+        // Check if the elements exist on the page
+        if (btnHero && leftCol && leftCol1) {
+            btnHero.addEventListener('click', function() {
+                leftCol.style.display = 'block';
+                leftCol1.style.display = 'none';
+            });
+        }
+    });
 }
+
+
+

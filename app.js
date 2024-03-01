@@ -31,6 +31,10 @@ app.get('/', (req, res) => {
     res.render('index');
 });
 
+app.get('/', (req, res) => {
+    res.render('auth/protected');
+});
+
 // Define route for Google OAuth authentication
 app.get('/auth/google',
     passport.authenticate('google', { scope: ['email', 'profile'] })

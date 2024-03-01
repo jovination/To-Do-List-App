@@ -105,6 +105,7 @@ main{
     line-height: 1.8;
 
 }
+.btn_hero_1,
 .btn_hero{
     width: 175px;
     height: 55px;
@@ -118,6 +119,7 @@ main{
     color: #fff;
     cursor: pointer;
 }
+.btn_hero_1 span,
 .btn_hero span{
     font-family: 'Onest', sans-serif;
     font-size: 18px;
