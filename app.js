@@ -58,8 +58,8 @@ app.get('/logout', (req, res) => {
     // Destroy user session
     req.logout();
     // Redirect user to localhost:5100
-   // res.redirect('https://to-do-lyst.onrender.com');
-    res.redirect('http//localhost:5100');
+     res.redirect('https://to-do-lyst.onrender.com');
+   // res.redirect('http//localhost:5100');
 
 });
 
