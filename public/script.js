@@ -172,43 +172,63 @@ document.querySelectorAll('.min-1 span').forEach(item => {
     });
 });
 // Cache DOM elements
-// Show popup when sign button is clicked
-// Add event listener using querySelector
+
 document.addEventListener('DOMContentLoaded', function() {
     const signBtn = document.querySelector('.sign_btn');
-
-    if (signBtn) {
-        signBtn.addEventListener('click', function() {
-            document.getElementById('popup_auth').style.display = 'block';
-        });
-    }
-});
-document.addEventListener('DOMContentLoaded', function() {
     const btnHero = document.querySelector('.btn_hero');
-
-    if (btnHero) {
-        btnHero.addEventListener('click', function() {
-            document.getElementById('popup_auth').style.display = 'block';
-        });
-    }
-});
-
-
-
-
-// Close popup when clicking outside of it
-document.getElementById('popup_auth').addEventListener('click', function(event) {
     const popup = document.getElementById('popup_auth');
     const authWrap = document.querySelector('.auth_wrap');
-    const signUi = document.querySelector('.sign_ui');
-    const isClickInsideAuthWrap = authWrap.contains(event.target);
-    const isClickOnSignUi = signUi.contains(event.target);
 
-    if (isClickInsideAuthWrap && !isClickOnSignUi ) {
-        popup.style.display = 'none';
-    } else {
+      // Function to show popup and apply transform classes
+      function showPopup() {
+        popup.style.opacity = '0';
         popup.style.display = 'block';
+        setTimeout(function() {
+            popup.style.opacity = '1';
+        }, 50);
+        authWrap.classList.remove('transform-out');
+        authWrap.classList.add('transform-in');
     }
+
+    // Function to hide popup and apply transform classes
+    function hidePopup() {
+        popup.style.opacity = '0';
+        setTimeout(function() {
+            popup.style.display = 'none';
+        }, 500);
+        authWrap.classList.remove('transform-in');
+        authWrap.classList.add('transform-out');
+    }
+
+    // Event listener for sign-in button
+    if (signBtn) {
+        signBtn.addEventListener('click', showPopup);
+    }
+
+    // Event listener for hero button
+    if (btnHero) {
+        btnHero.addEventListener('click', showPopup);
+    }
+
+    document.getElementById('popup_auth').addEventListener('click', function(event) {
+        const popup = document.getElementById('popup_auth');
+        const authWrap = document.querySelector('.auth_wrap');
+        const signUi = document.querySelector('.sign_ui');
+        const isClickInsideAuthWrap = authWrap.contains(event.target);
+        const isClickOnSignUi = signUi.contains(event.target);
+    
+        if (isClickInsideAuthWrap && !isClickOnSignUi ) {
+            popup.style.display = 'none';
+            authWrap.classList.remove('transform-in');
+            authWrap.classList.add('transform-out');
+            hidePopup();
+        } else {
+            popup.style.display = 'block';
+            authWrap.classList.remove('transform-out');
+            authWrap.classList.add('transform-in');
+            showPopup();
+        }
+    });
 });
 
 

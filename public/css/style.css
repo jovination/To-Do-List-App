@@ -438,15 +438,15 @@ input[type="checkbox"]::before {
     position: absolute;
     top: 0px;
     left: 0px;
+    content:'';
     z-index: 2;
     display: none;
-    transition-delay: .2s;
-    transition-property: all .5s ease;
 }
 
 .auth_wrap{
     width: 1250px;
     height: 650px;
+    transform:translate(-50%, -50%) scale(0.5);
     position: absolute;
     top: 47%;
     left: 50%;
@@ -773,3 +773,19 @@ input[type="email"]{
     border-radius: 50%;  
      
 }
+
+transform-in, .transform-out {
+    display:block;
+    -webkit-transition:all ease 0.8s;
+    transition:all ease 0.8s;
+  }
+  
+  .transform-in {
+      -webkit-transform:translate(-50%, -50%) scale(1);
+      transform:translate(-50%, -50%) scale(1);
+  }
+  
+  .transform-out {
+      -webkit-transform:translate(-50%, -50%) scale(0.5);
+       transform:translate(-50%, -50%) scale(0.5);
+  }
