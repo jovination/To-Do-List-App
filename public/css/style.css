@@ -446,7 +446,6 @@ input[type="checkbox"]::before {
 .auth_wrap{
     width: 1250px;
     height: 650px;
-    transform:translate(-50%, -50%) scale(0.5);
     position: absolute;
     top: 47%;
     left: 50%;
@@ -457,6 +456,7 @@ input[type="checkbox"]::before {
 .sign_ui{
     width: 434px;
     height: 600px;
+    position: absolute;
     background: #000;
     border-radius: 30px;
     display: flex;
@@ -464,7 +464,50 @@ input[type="checkbox"]::before {
     align-items: center;
     flex-direction: column;
     gap: 20px;
+    animation-name: popUp_fadeIn;
+    -webkit-animation-name: popUp_fadeIn; 
+    animation-duration: 0.5s;
+    -webkit-animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-timing-function: ease-in-out;
 }
+
+@keyframes popUp_fadeIn {
+    0% {
+        transform: scale(0);
+        opacity: 0.0;       
+    }
+    60% {
+        transform: scale(1.1);  
+    }
+    80% {
+        transform: scale(0.9);
+        opacity: 1; 
+    }   
+    100% {
+        transform: scale(1);
+        opacity: 1; 
+    }       
+}
+
+@-webkit-keyframes popUp_fadeIn {
+    0% {
+        -webkit-transform: scale(0);
+        opacity: 0.0;       
+    }
+    60% {
+        -webkit-transform: scale(1.1);
+    }
+    80% {
+        -webkit-transform: scale(0.9);
+        opacity: 1; 
+    }   
+    100% {
+        -webkit-transform: scale(1);
+        opacity: 1; 
+    }       
+}
+
 .s_txt{
     margin-bottom: 5px;
 }
@@ -773,7 +816,6 @@ input[type="email"]{
     border-radius: 50%;  
      
 }
-
 transform-in, .transform-out {
     display:block;
     -webkit-transition:all ease 0.8s;
@@ -781,11 +823,11 @@ transform-in, .transform-out {
   }
   
   .transform-in {
-      -webkit-transform:translate(-50%, -50%) scale(1);
-      transform:translate(-50%, -50%) scale(1);
+      -webkit-transform: scale(1);
+      transform: scale(1);
   }
   
   .transform-out {
-      -webkit-transform:translate(-50%, -50%) scale(0.5);
-       transform:translate(-50%, -50%) scale(0.5);
+      -webkit-transform: scale(0.5);
+       transform: scale(0.5);
   }

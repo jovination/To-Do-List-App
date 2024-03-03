@@ -172,12 +172,11 @@ document.querySelectorAll('.min-1 span').forEach(item => {
     });
 });
 // Cache DOM elements
-
 document.addEventListener('DOMContentLoaded', function() {
     const signBtn = document.querySelector('.sign_btn');
     const btnHero = document.querySelector('.btn_hero');
+    const signUi = document.querySelector('.sign_ui');
     const popup = document.getElementById('popup_auth');
-    const authWrap = document.querySelector('.auth_wrap');
 
       // Function to show popup and apply transform classes
       function showPopup() {
@@ -186,18 +185,19 @@ document.addEventListener('DOMContentLoaded', function() {
         setTimeout(function() {
             popup.style.opacity = '1';
         }, 50);
-        authWrap.classList.remove('transform-out');
-        authWrap.classList.add('transform-in');
+        signUi.classList.remove('transform-out');
+        signUi.classList.add('transform-in');
     }
 
     // Function to hide popup and apply transform classes
     function hidePopup() {
         popup.style.opacity = '0';
+        popup.style.display = 'none';
         setTimeout(function() {
             popup.style.display = 'none';
         }, 500);
-        authWrap.classList.remove('transform-in');
-        authWrap.classList.add('transform-out');
+        signUi.classList.remove('transform-in');
+        signUi.classList.add('transform-out');
     }
 
     // Event listener for sign-in button
@@ -217,19 +217,21 @@ document.addEventListener('DOMContentLoaded', function() {
         const isClickInsideAuthWrap = authWrap.contains(event.target);
         const isClickOnSignUi = signUi.contains(event.target);
     
-        if (isClickInsideAuthWrap && !isClickOnSignUi ) {
+        if (!isClickOnSignUi && isClickInsideAuthWrap){
             popup.style.display = 'none';
-            authWrap.classList.remove('transform-in');
-            authWrap.classList.add('transform-out');
+            signUi.classList.remove('transform-in');
+            signUi.classList.add('transform-out');
             hidePopup();
-        } else {
+        }
+         else {
             popup.style.display = 'block';
-            authWrap.classList.remove('transform-out');
-            authWrap.classList.add('transform-in');
+            signUi.classList.remove('transform-out');
+            signUi.classList.add('transform-in');
             showPopup();
         }
     });
 });
+
 
 
 
