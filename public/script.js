@@ -225,9 +225,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
          else {
             popup.style.display = 'block';
-            signUi.classList.remove('transform-out');
-            signUi.classList.add('transform-in');
-            showPopup();
         }
     });
 });
