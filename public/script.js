@@ -176,12 +176,24 @@ document.querySelectorAll('.min-1 span').forEach(item => {
 // Add event listener using querySelector
 document.addEventListener('DOMContentLoaded', function() {
     const signBtn = document.querySelector('.sign_btn');
+
     if (signBtn) {
         signBtn.addEventListener('click', function() {
             document.getElementById('popup_auth').style.display = 'block';
         });
     }
 });
+document.addEventListener('DOMContentLoaded', function() {
+    const btnHero = document.querySelector('.btn_hero');
+
+    if (btnHero) {
+        btnHero.addEventListener('click', function() {
+            document.getElementById('popup_auth').style.display = 'block';
+        });
+    }
+});
+
+
 
 
 // Close popup when clicking outside of it
@@ -192,7 +204,7 @@ document.getElementById('popup_auth').addEventListener('click', function(event) 
     const isClickInsideAuthWrap = authWrap.contains(event.target);
     const isClickOnSignUi = signUi.contains(event.target);
 
-    if (isClickInsideAuthWrap && !isClickOnSignUi) {
+    if (isClickInsideAuthWrap && !isClickOnSignUi ) {
         popup.style.display = 'none';
     } else {
         popup.style.display = 'block';

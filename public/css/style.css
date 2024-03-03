@@ -440,7 +440,10 @@ input[type="checkbox"]::before {
     left: 0px;
     z-index: 2;
     display: none;
+    transition-delay: .2s;
+    transition-property: all .5s ease;
 }
+
 .auth_wrap{
     width: 1250px;
     height: 650px;
