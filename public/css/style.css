@@ -122,12 +122,12 @@ main{
 .btn_hero_1 span,
 .btn_hero span{
     font-family: 'Onest', sans-serif;
-    font-size: 18px;
+    font-size: 17px;
     font-weight: 400;
 }
 .arrow_icon{
-    width: 18px;
-    height: 18px;
+    width: 16px;
+    height: 16px;
 }
 .left_container_01{
     margin-top: 50px;
@@ -269,7 +269,7 @@ input[type="text"]{
 #detail__txt{
     flex: 1;
     font-size: 16px;
-    color: #111;
+    color: #000;
     font-weight: 400;
     min-width: 0; /* Allow the textarea to shrink if necessary */
     min-height: 0; /* Allow the textarea to shrink if necessary */
