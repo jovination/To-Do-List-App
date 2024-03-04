@@ -3,8 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
+  
   "scripts": {
-    "start": "nodemon app.js"
+    "scss": "node-sass public/css/style.scss public/css/style.css",
+    "watch:scss": "npm run scss -- --watch",
+    "start": "npm-run-all -p watch:scss start:server",
+    "start:server": "nodemon app.js"
   },
   "keywords": [],
   "author": "",
@@ -14,10 +18,12 @@
     "ejs": "^3.1.9",
     "express": "^4.18.2",
     "express-session": "^1.18.0",
+    "node-sass": "^9.0.0",
     "passport": "^0.7.0",
     "passport-google-oauth2": "^0.2.0"
   },
   "devDependencies": {
-    "nodemon": "^3.1.0"
+    "nodemon": "^3.1.0",
+    "npm-run-all": "^4.1.5"
   }
 }
