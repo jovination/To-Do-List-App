@@ -136,6 +136,16 @@ main{
     display: flex;
     flex-direction: column;
     gap: 40px;
+    opacity: 0;
+    transform: translateY(-40px);
+    animation: fadeIn 1s forwards;
+    animation-delay: .5s;
+}
+@keyframes fadeIn {
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 .notify__icon{
     display: none;
@@ -434,7 +444,7 @@ input[type="checkbox"]::before {
 .pop_auth{
     width: 100%;
     height:  100%;
-    background-color: rgba(0, 0, 0, 0.70);
+    background-color: rgba(0, 0, 0, 0.75);
     position: absolute;
     top: 0px;
     left: 0px;
