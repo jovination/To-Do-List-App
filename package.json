@@ -9,7 +9,6 @@
     "start": "npm run watch:scss & npm run start:server",
     "start:server": "nodemon app.js"
   },
-
   "keywords": [],
   "author": "",
   "license": "ISC",
