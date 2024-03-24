@@ -8,7 +8,6 @@
     "start": "npm run scss & npm run start:server",
     "start:server": "nodemon app.js"
   },
-  
   "keywords": [],
   "author": "",
   "license": "ISC",
