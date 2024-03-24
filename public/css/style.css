@@ -444,7 +444,7 @@ input[type="checkbox"]::before {
   width: 1250px;
   height: 650px;
   position: absolute;
-  top: 48%;
+  top: 350px;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
