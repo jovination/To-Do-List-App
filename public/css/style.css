@@ -373,7 +373,8 @@ input[type="text"] {
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center; }
+  justify-content: center; 
+}
 
 .r__title,
 .r__details,
@@ -382,35 +383,43 @@ input[type="text"] {
   height: 35px;
   display: flex;
   justify-content: space-between;
-  align-items: center; }
+  align-items: center; \
+}
 
 .r__time {
-  position: relative; }
+  position: relative; 
+}
 
 .task__time {
   position: absolute;
-  right: -72px; }
+  right: -72px; 
+}
 
 .check__wrapper {
   width: 60px;
   height: 100px;
   display: flex;
   justify-content: center;
-  position: relative; }
+  position: relative; 
+}
 
 .task__title {
-  font-size: 18px; }
+  font-size: 18px;
+ }
 
 .task__details {
   font-weight: 300;
-  font-size: 14px; }
+  font-size: 14px; 
+}
 
 .task__time {
-  font-size: 10px; }
+  font-size: 10px; 
+}
 
 .clock__icon {
   width: 16px;
-  height: 16px; }
+  height: 16px; 
+}
 
 input[type="checkbox"] {
   appearance: none;
@@ -438,7 +447,8 @@ input[type="checkbox"]::before {
   left: 0px;
   content: '';
   z-index: 2;
-  display: none; }
+  display: none; 
+}
 
 .auth_wrap {
   width: 1250px;
@@ -448,7 +458,8 @@ input[type="checkbox"]::before {
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
-  justify-content: flex-end; }
+  justify-content: flex-end; 
+}
 
 .sign_ui {
   width: 434px;
