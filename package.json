@@ -4,11 +4,12 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "scss": "node-sass public/css/style.scss public/css/style.css",
+    "scss": "sudo node-sass public/css/style.scss public/css/style.css",
     "watch:scss": "npm run scss -- --watch",
     "start": "npm run watch:scss & npm run start:server",
     "start:server": "nodemon app.js"
   },
+  
   "keywords": [],
   "author": "",
   "license": "ISC",
