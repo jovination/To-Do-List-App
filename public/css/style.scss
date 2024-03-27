@@ -136,11 +136,14 @@ main{
     display: flex;
     flex-direction: column;
     gap: 40px;
+    /*
     opacity: 0;
     transform: translateY(-40px);
     animation: fadeIn 1s forwards;
     animation-delay: .5s;
+    */
 }
+
 @keyframes fadeIn {
     to{
         opacity: 1;
@@ -446,7 +449,7 @@ input[type="checkbox"]::before {
     height:  100%;
     background-color: rgba(0, 0, 0, 0.75);
     position: absolute;
-    top: 0px;
+    top: -10px;
     left: 0px;
     content:'';
     z-index: 2;
@@ -457,7 +460,7 @@ input[type="checkbox"]::before {
     width: 1250px;
     height: 650px;
     position: absolute;
-    top: 47%;
+    top: 350px;
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
