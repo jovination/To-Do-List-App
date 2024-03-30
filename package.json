@@ -6,7 +6,8 @@
   "scripts": {
     "scss": "sass public/css/style.scss public/css/style.css --watch",
     "start": "concurrently \"npm run scss\" \"npm run start:server\"",
-    "start:server": "nodemon app.js"
+    "start:server": "nodemon app.js",
+    "postinstall": "chmod +x node_modules/.bin/concurrently"
   },
   "keywords": [],
   "author": "",
