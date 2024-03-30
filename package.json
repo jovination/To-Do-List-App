@@ -4,7 +4,7 @@
   "description": "A simple To-Do List application",
   "main": "app.js",
   "scripts": {
-    "start": "concurrently \"npm run scss\" \"npm run start:server\"",
+    "start": "npm run scss && npm run start:server",
     "scss": "sass public/css/style.scss public/css/style.css --watch",
     "start:server": "nodemon app.js"
   },
@@ -24,7 +24,6 @@
     "passport-google-oauth2": "^0.2.0"
   },
   "devDependencies": {
-    "concurrently": "^8.2.2",
     "nodemon": "^3.1.0",
     "sass": "^1.72.0"
   }
