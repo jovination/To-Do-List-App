@@ -35,7 +35,6 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 10px
 }
 
 .nav-bar {
@@ -220,7 +219,8 @@ main {
 .illustration {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .left__col {
@@ -299,6 +299,12 @@ input[type=text] {
   color: #111;
 }
 
+#task__title::-moz-placeholder {
+  font-size: 24px;
+  font-weight: 500;
+  background: #f6f5f4;
+}
+
 #task__title::placeholder {
   font-size: 24px;
   font-weight: 500;
@@ -334,6 +340,14 @@ input[type=text] {
   font-weight: 500;
   color: #757575;
   cursor: pointer;
+}
+
+#detail__txt::-moz-placeholder {
+  width: 100%;
+  height: 100%;
+  font-size: 17px;
+  font-weight: 500;
+  background: #f6f5f4;
 }
 
 #detail__txt::placeholder {
@@ -465,7 +479,9 @@ input[type=text] {
 }
 
 input[type=checkbox] {
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   background: #fff;
   margin: 0;
   width: 24px;
@@ -539,23 +555,6 @@ input[type=checkbox]::before {
   }
   100% {
     transform: scale(1);
-    opacity: 1;
-  }
-}
-@-webkit-keyframes popUp_fadeIn {
-  0% {
-    -webkit-transform: scale(0);
-    opacity: 0;
-  }
-  60% {
-    -webkit-transform: scale(1.1);
-  }
-  80% {
-    -webkit-transform: scale(0.9);
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: scale(1);
     opacity: 1;
   }
 }
@@ -657,6 +656,11 @@ input[type=email] {
   color: #777;
   font-size: 18px;
   margin-left: 8px;
+}
+
+#gmail_id::-moz-placeholder {
+  font-family: "onest";
+  font-weight: 500;
 }
 
 #gmail_id::placeholder {
@@ -899,18 +903,13 @@ input[type=email] {
 
 transform-in, .transform-out {
   display: block;
-  -webkit-transition: all ease 0.8s;
   transition: all ease 0.8s;
 }
 
 .transform-in {
-  -webkit-transform: scale(1);
   transform: scale(1);
 }
 
 .transform-out {
-  -webkit-transform: scale(0);
   transform: scale(0);
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
