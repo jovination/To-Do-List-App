@@ -17,4 +17,11 @@ To-Do-List-Apps a Node.js web application designed to streamline your workflow w
 
 - Node.js and npm (or yarn) installed on your system.
 <h2>Installation:</h2>
+<h3>1. Clone this repository</h3>
+
+```shell
+
+   https://github.com/jovination/To-Do-List-App.git
+
+```
 
