@@ -9,3 +9,12 @@ To-Do-List-Apps a Node.js web application designed to streamline your workflow w
 - To-Do Lists: Create, manage, and track your tasks efficiently.
 - Secure Authentication: Google OAuth 2.0 ensures your data remains protected.
 - Planned Integrations: Note-taking functionality coming soon!
+# Tech Stack
+- Node.js: JavaScript runtime environment for server-side development.
+- Express.js: Web framework for building Node.js applications.
+# Getting Started
+<h2>Prerequisites:</h2>
+
+- Node.js and npm (or yarn) installed on your system.
+<h2>Installation:</h2>
+
