@@ -24,4 +24,11 @@ To-Do-List-Apps a Node.js web application designed to streamline your workflow w
    https://github.com/jovination/To-Do-List-App.git
 
 ```
+<h3>2. Navigate to the project directory:</h3>
+                                            
+ ```shell
+
+ cd To-Do-List-App
+
+  ```
 
