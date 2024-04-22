@@ -12,6 +12,11 @@ To-Do-List-Apps a Node.js web application designed to streamline your workflow w
 # Tech Stack
 - Node.js: JavaScript runtime environment for server-side development.
 - Express.js: Web framework for building Node.js applications.
+# Live Preview
+``` shell
+https://to-do-lyst.onrender.com/
+
+```
 # Getting Started
 <h2>Prerequisites:</h2>
 
