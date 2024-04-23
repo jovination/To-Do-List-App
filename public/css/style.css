@@ -109,6 +109,8 @@ main {
 .main_p {
   font-family: "poppins", sans-serif;
   font-size: 18px;
+  letter-spacing: .2px;
+  font-style: normal;
   font-weight: 500;
   color: rgba(0, 0, 0, .87);
   line-height: 1.8;
