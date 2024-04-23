@@ -156,12 +156,10 @@ main {
   display: flex;
   flex-direction: column;
   gap: 40px;
-  /*
   opacity: 0;
-  transform: translateY(-40px);
+  transform: translateY(40px);
   animation: fadeIn 1s forwards;
   animation-delay: .5s;
-  */
 }
 
 @keyframes fadeIn {
@@ -229,6 +227,10 @@ main {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+     opacity: 0;
+     transform: translatex(40px);
+     animation: fadeIn 1.2s forwards;
+     animation-delay: .5s;
 }
 
 .left__col {
