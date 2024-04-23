@@ -101,7 +101,7 @@ main {
 
 .main_h {
   font-family: "Onest", sans-serif;
-  font-size: 55px;
+  font-size: 60px;
   font-weight: 700;
   color: #111;
 }
@@ -119,7 +119,7 @@ main {
   width: 175px;
   height: 50px;
   border-radius: 6px;
-  background: #111;
+  background: #121212;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -127,6 +127,12 @@ main {
   gap: 10px;
   color: #fff;
   cursor: pointer;
+  box-shadow: 0 .3259259164px .7333333492px 0 rgba(0, 0, 0, .12), 0 1.5407407284px 2.8666665554px 0 rgba(0, 0, 0, .07), 0 4px 9px 0 rgba(0, 0, 0, .05);
+}
+.btn_hero_1:hover,
+.btn_hero:hover {
+  background: #333;
+  ;
 }
 
 .btn_hero_1 span,
