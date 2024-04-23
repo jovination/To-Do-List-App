@@ -237,7 +237,7 @@ main {
   -o-object-fit: cover;
      object-fit: cover;
      opacity: 0;
-     transform: translatex(40px);
+     transform: translatex(50px);
      animation: fadeIn 1.2s forwards;
      animation-delay: .5s;
 }
