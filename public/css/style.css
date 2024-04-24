@@ -293,6 +293,17 @@ input[type=text] {
   font-family: "Onest", sans-serif;
 }
 
+
+/* Override box-shadow for autofill on email input */
+input[type="email"]:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #161616 inset !important; /* Override box-shadow */
+}
+
+/* Reset appearance for autofill on email input */
+input[type="email"]:-webkit-autofill {
+  -webkit-text-fill-color: #777; /* Override text color */
+}
+
 .form__details {
   width: 400px;
   height: 100%;
