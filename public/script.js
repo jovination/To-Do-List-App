@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', function(){
     const elements = {
         addTime: document.getElementById('time__txt'),
@@ -272,5 +273,14 @@ document.addEventListener('DOMContentLoaded', function() {
         
     }
 });
+
+document.getElementById('google-auth-btn').addEventListener('click', function() {
+    // Get the value entered by the user
+    const userEmail = document.getElementById('gmail_id').value;
+
+    // Redirect the user to Google authentication with the email information
+    window.location.href = '/auth/google?email=' + encodeURIComponent(userEmail);
+});
+
 
 
