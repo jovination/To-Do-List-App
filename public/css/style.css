@@ -19,6 +19,16 @@ input:-webkit-autofill {
   -webkit-text-fill-color: #333; /* Override text color */
 }
 
+/* Override box-shadow for autofill on email input */
+input[type=email]:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #161616 inset !important; /* Override box-shadow */
+}
+
+/* Reset appearance for autofill on email input */
+input[type=email]:-webkit-autofill {
+  -webkit-text-fill-color: #777; /* Override text color */
+}
+
 body {
   width: 100%;
   height: 100%;
@@ -31,7 +41,7 @@ body {
 
 header {
   width: 100%;
-  height: 70px;
+  height: 75px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -101,35 +111,25 @@ main {
 
 .main_h {
   font-family: "Onest", sans-serif;
-  font-size: 60px;
+  font-size: 55px;
   font-weight: 700;
   color: #111;
-  opacity: 0;
-  transform: translateY(40px);
-  animation: fadeIn .8s forwards;
-  animation-delay: .3s;
 }
 
 .main_p {
-  font-family: "poppins", sans-serif;
-  font-size: 18px;
-  letter-spacing: .2px;
-  font-style: normal;
+  font-family: "Onest", sans-serif;
+  font-size: 22px;
   font-weight: 500;
-  color: rgba(0, 0, 0, .87);
+  color: #111;
   line-height: 1.8;
-  opacity: 0;
-  transform: translateY(40px);
-  animation: fadeIn 1.0s forwards;
-  animation-delay: .4s;
 }
 
 .btn_hero_1,
 .btn_hero {
   width: 175px;
-  height: 50px;
+  height: 55px;
   border-radius: 6px;
-  background: #121212;
+  background: #111;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -137,16 +137,6 @@ main {
   gap: 10px;
   color: #fff;
   cursor: pointer;
-  box-shadow: 0 .3259259164px .7333333492px 0 rgba(0, 0, 0, .12), 0 1.5407407284px 2.8666665554px 0 rgba(0, 0, 0, .07), 0 4px 9px 0 rgba(0, 0, 0, .05);
-  opacity: 0;
-  transform: translateY(40px);
-  animation: fadeIn 1.2s forwards;
-  animation-delay: .5s;
-}
-.btn_hero_1:hover,
-.btn_hero:hover {
-  background: #333;
-  ;
 }
 
 .btn_hero_1 span,
@@ -162,13 +152,18 @@ main {
 }
 
 .left_container_01 {
-  margin-top: 30px;
+  margin-top: 50px;
   width: 100%;
-  height: 500px;
+  height: 470px;
   display: flex;
   flex-direction: column;
   gap: 40px;
- 
+  /*
+  opacity: 0;
+  transform: translateY(-40px);
+  animation: fadeIn 1s forwards;
+  animation-delay: .5s;
+  */
 }
 
 @keyframes fadeIn {
@@ -226,9 +221,9 @@ main {
 }
 
 .illustration__wrapper {
-  margin-top: 20px;
-  width: 550px;
-  height: 500px;
+  margin-top: 50px;
+  width: 100%;
+  height: 420px;
 }
 
 .illustration {
@@ -236,10 +231,6 @@ main {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-     opacity: 0;
-     transform: translatex(50px);
-     animation: fadeIn 1.2s forwards;
-     animation-delay: .5s;
 }
 
 .left__col {
@@ -291,17 +282,6 @@ input[type=text] {
   border: none;
   outline: none;
   font-family: "Onest", sans-serif;
-}
-
-
-/* Override box-shadow for autofill on email input */
-input[type="email"]:-webkit-autofill {
-  -webkit-box-shadow: 0 0 0 1000px #161616 inset !important; /* Override box-shadow */
-}
-
-/* Reset appearance for autofill on email input */
-input[type="email"]:-webkit-autofill {
-  -webkit-text-fill-color: #777; /* Override text color */
 }
 
 .form__details {
@@ -545,7 +525,7 @@ input[type=checkbox]::before {
   width: 1250px;
   height: 650px;
   position: absolute;
-  top: 350px;
+  top: 353px;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
@@ -669,19 +649,11 @@ input[type=checkbox]::before {
   justify-content: center;
   gap: 20px;
 }
-#google-auth-btn{
-  width: 45px;
-  height: 45px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-
-}
 
 .arrg {
   width: 45px;
   height: 45px;
+  cursor: pointer;
 }
 
 input[type=email] {
@@ -785,9 +757,6 @@ input[type=email] {
   width: 25px;
   height: 25px;
 }
-#setTimePopup{
-  display: none;
-}
 
 .setTime_ui {
   width: 250px;
@@ -799,18 +768,8 @@ input[type=email] {
   align-items: center;
   padding: 5px;
   color: #fff;
-  animation: fade .4s ease 1 forwards;
 }
-@keyframes fade {
-  from {
-    opacity: 0;
-    transform: scale(0.8);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
+
 .setTime_wrapper {
   width: 230px;
   height: 370px;
