@@ -766,7 +766,9 @@ input[type=email] {
   width: 25px;
   height: 25px;
 }
-
+#setTimePopup{
+  display: none;
+}
 .setTime_ui {
   width: 250px;
   height: 400px;
