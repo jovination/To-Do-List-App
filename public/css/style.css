@@ -261,7 +261,6 @@ main {
 
 .button__wrapper {
   width: 100%;
-  height: 90px;
   display: flex;
   justify-content: end;
   align-items: center;
