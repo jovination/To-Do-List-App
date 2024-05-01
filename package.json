@@ -4,7 +4,11 @@
   "description": "A simple To-Do List application",
   "main": "app.js",
   "scripts": {
-    "start": "pm2 start app.js --name 'to-do-list-app'"
+    "start": "npm run scss && npm run start:server",
+    "scss": "sass public/css/style.scss public/css/style.css --watch",
+    "watch:scss": "npm run scss -- --watch",
+    "start": "npm install && npm run scss & npm run start:server",
+    "start:server": "nodemon app.js"
   },
   "keywords": [
     "todo",
@@ -19,10 +23,10 @@
     "express": "^4.18.2",
     "express-session": "^1.18.0",
     "passport": "^0.7.0",
-    "passport-google-oauth2": "^0.2.0",
-    "pm2": "^5.3.1"
+    "passport-google-oauth2": "^0.2.0"
   },
   "devDependencies": {
-    "nodemon": "^3.1.0"
+    "nodemon": "^3.1.0",
+    "sass": "^1.72.0"
   }
 }
