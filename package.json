@@ -4,7 +4,7 @@
   "description": "A simple To-Do List application",
   "main": "app.js",
   "scripts": {
-    "start": "sudo pm2 start app.js --name 'to-do-list-app'"
+    "start": "pm2 start app.js --name 'to-do-list-app'"
   },
   "keywords": [
     "todo",
