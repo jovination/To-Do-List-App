@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "start": "npm run scss && npm run start:server",
-    "scss": "sass public/css/style.scss public/css/style.css --watch",
+    "scss": "node_modules/.bin/sass public/css/style.scss public/css/style.css --watch",
     "watch:scss": "npm run scss -- --watch",
     "install": "npm install && npm run scss && npm run start:server",
     "start:server": "nodemon --inspect app.js"
