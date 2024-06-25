@@ -19,15 +19,6 @@ input:-webkit-autofill {
   -webkit-text-fill-color: #333; /* Override text color */
 }
 
-input[type = email]:-webkit-autofill {
-  -webkit-box-shadow: 0 0 0 1000px #161616 inset !important; /* Override box-shadow */
-}
-
-/* Reset appearance for autofill */
-input[type = email]:-webkit-autofill {
-  -webkit-text-fill-color: #727575; /* Override text color */
-}
-
 body {
   width: 100%;
   height: 100%;
@@ -40,7 +31,7 @@ body {
 
 header {
   width: 100%;
-  height: 80px;
+  height: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -90,7 +81,7 @@ main {
 
 .wrapper {
   width: 1150px;
-  height: 650px;
+  height: 100vh;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -115,22 +106,22 @@ main {
   color: #111;
   opacity: 0;
   transform: translateY(40px);
-  animation: fadeIn .8s forwards;
-  animation-delay: .3s;
+  animation: fadeIn 0.8s forwards;
+  animation-delay: 0.3s;
 }
 
 .main_p {
   font-family: "poppins", sans-serif;
   font-size: 18px;
-  letter-spacing: .2px;
+  letter-spacing: 0.2px;
   font-style: normal;
   font-weight: 500;
-  color: rgba(0, 0, 0, .87);
+  color: rgba(0, 0, 0, 0.87);
   line-height: 1.8;
   opacity: 0;
   transform: translateY(40px);
-  animation: fadeIn 1.0s forwards;
-  animation-delay: .4s;
+  animation: fadeIn 1s forwards;
+  animation-delay: 0.4s;
 }
 
 .btn_hero_1,
@@ -146,16 +137,16 @@ main {
   gap: 10px;
   color: #fff;
   cursor: pointer;
-  box-shadow: 0 .3259259164px .7333333492px 0 rgba(0, 0, 0, .12), 0 1.5407407284px 2.8666665554px 0 rgba(0, 0, 0, .07), 0 4px 9px 0 rgba(0, 0, 0, .05);
+  box-shadow: 0 0.3259259164px 0.7333333492px 0 rgba(0, 0, 0, 0.12), 0 1.5407407284px 2.8666665554px 0 rgba(0, 0, 0, 0.07), 0 4px 9px 0 rgba(0, 0, 0, 0.05);
   opacity: 0;
   transform: translateY(40px);
   animation: fadeIn 1.2s forwards;
-  animation-delay: .5s;
+  animation-delay: 0.5s;
 }
+
 .btn_hero_1:hover,
 .btn_hero:hover {
   background: #333;
-  ;
 }
 
 .btn_hero_1 span,
@@ -177,7 +168,6 @@ main {
   display: flex;
   flex-direction: column;
   gap: 40px;
- 
 }
 
 @keyframes fadeIn {
@@ -218,6 +208,7 @@ main {
   align-items: center;
   cursor: pointer;
 }
+
 .login_btn:hover {
   background: #F5F5F5;
   color: #000;
@@ -235,7 +226,7 @@ main {
 }
 
 .illustration__wrapper {
-  margin-top: 20px;
+  margin-top: 50px;
   width: 550px;
   height: 500px;
 }
@@ -244,11 +235,11 @@ main {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
-     opacity: 0;
-     transform: translatex(40px);
-     animation: fadeIn 1.2s forwards;
-     animation-delay: .5s;
+  object-fit: cover;
+  opacity: 0;
+  transform: translatex(40px);
+  animation: fadeIn 1.2s forwards;
+  animation-delay: 0.5s;
 }
 
 .left__col {
@@ -261,6 +252,7 @@ main {
 
 .button__wrapper {
   width: 100%;
+  height: 90px;
   display: flex;
   justify-content: end;
   align-items: center;
@@ -507,8 +499,8 @@ input[type=text] {
 
 input[type=checkbox] {
   -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   background: #fff;
   margin: 0;
   width: 24px;
@@ -528,7 +520,7 @@ input[type=checkbox]::before {
 
 .pop_auth {
   width: 100%;
-  height: 100%;
+  height: 120vh;
   background-color: rgba(0, 0, 0, 0.75);
   position: absolute;
   top: -10px;
@@ -542,7 +534,7 @@ input[type=checkbox]::before {
   width: 1250px;
   height: 650px;
   position: absolute;
-  top: 355px;
+  top: 350px;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
@@ -604,6 +596,7 @@ input[type=checkbox]::before {
   color: #777;
   text-align: center;
 }
+
 .term_wrap span a {
   color: #777;
 }
@@ -703,6 +696,7 @@ input[type=email] {
   flex-direction: column;
   gap: 4px;
 }
+
 .other_btn span {
   color: #777;
   font-size: 14px;
@@ -774,9 +768,11 @@ input[type=email] {
   width: 25px;
   height: 25px;
 }
-#setTimePopup{
+
+#setTimePopup {
   display: none;
 }
+
 .setTime_ui {
   width: 250px;
   height: 400px;
@@ -941,4 +937,6 @@ transform-in, .transform-out {
 
 .transform-out {
   transform: scale(0);
-}/*# sourceMappingURL=style.css.map */
+} 
+
+/*# sourceMappingURL=style.css.map */
