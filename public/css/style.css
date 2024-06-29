@@ -198,6 +198,10 @@ main {
   cursor: pointer;
 }
 
+.sign_btn:hover {
+  background: #333;
+}
+
 .login_btn {
   width: 85px;
   height: 40px;
@@ -226,7 +230,7 @@ main {
 }
 
 .illustration__wrapper {
-  margin-top: 70px;
+  margin-top: 50px;
   width: 550px;
   height: 500px;
 }
